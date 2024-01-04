@@ -1,0 +1,196 @@
+@font-face {
+    font-family: monument;
+    src: url(assets/MonumentGrotesk-Medium.ttf);
+}
+
+html{
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    overflow:hidden;
+}
+
+*{
+    font-family: monument;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.indexLayer{
+    width: 100vw;
+    height: 8.6rem;
+/* flex-shrink: 0; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #FFF 26.66%, rgba(255, 255, 255, 0.00) 100%);
+    /* backdrop-filter: blur(2px); */
+    z-index: 8;
+}
+
+.aboutLayer{
+    width: 100vw;
+    height: 8.6rem;
+/* flex-shrink: 0; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #FFF 26.66%, rgba(255, 255, 255, 0.00) 100%);
+    /* backdrop-filter: blur(2px); */
+    z-index: 8;
+}
+
+header{
+    position:absolute;
+    width: 96vw;
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.4rem;
+    z-index: 11 !important;
+}
+
+.titleLinks{
+    font-size: 1.8rem;
+    display: inline-flex;
+    gap:6.4rem;
+}
+
+.onAbout{
+    text-decoration: underline !important;
+    text-underline-offset: 0.5rem;
+}
+
+.subheader{
+    position:absolute;
+    width: 96vw;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 8.6rem;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    z-index: 10 !important;
+}
+
+.back{
+    flex: 3;
+}
+
+.projectTitle{
+    flex: 8;
+}
+
+.prevnext{
+    display: inline-flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.hidden{
+    display: none;
+}
+
+.container{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 96vw;
+    height: calc(100vh - 8.6rem - 4vh);
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    /* gap: 8rem; */
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 4rem;
+    padding-top: 8.6rem;
+    z-index: 3 !important;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.img
+{
+    align-items: center;
+}
+
+.threeCols .img{
+    width: calc((96vw - 5rem) / 3);
+}
+
+.twoCols .large{
+    width: calc((96vw - 2.5rem) / 3 * 2);
+}
+
+.twoCols .small{
+    width: calc((96vw - 2.5rem) / 3);
+}
+
+.img p{
+    text-align: center;
+    font-size: 1.8rem;
+    padding-top: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s linear;
+}
+
+img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+img:hover + p{
+    opacity: 1;
+}
+
+.colorImage{
+    filter: grayscale(100%) brightness(110%) opacity(60%) contrast(100%);
+    transition: filter 0.3s linear;
+}
+
+.colorImage:hover{
+    filter:none;
+}
+
+.largeVertical{
+    width: 65% !important;
+}
+
+.midVertical{
+    width: 55% !important;
+}
+
+.smallVertical{
+    width: 45% !important;
+}
+
+.largeHorizontal{
+    width: 100% !important;
+}
+
+.midHorizontal{
+    width: 80% !important;
+}
+
+.smallHorizontal{
+    width: 60% !important;
+}
